@@ -26,8 +26,10 @@
       </select>
       <button type="submit" name="button">送信</button>
     </form>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/ajax.js') }}"></script>
   </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
     $(function() {
       $('#ajaxId').on('change', function() {
@@ -48,7 +50,7 @@
           //成功時の処理
           $('#ajaxClass option').remove();
           $.each(data, function(cls_cd, cls_name) {
-            $('#ajaxClass').append($('<option>').text(cls_name).attr('value', cls_cd));
+            $('#ajaxClass').append($('<option>').text(Object.cls_name).attr('value', Object.cls_cd));
           });
           console.log(data);
         })
@@ -65,5 +67,5 @@
       });
 
     });
-  </script>
+  </script> -->
 </html>

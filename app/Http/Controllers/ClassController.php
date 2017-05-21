@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Clas;
 use App\Store;
+use Response;
+use Input;
 
 class ClassController extends Controller
 {
@@ -27,7 +29,8 @@ class ClassController extends Controller
     public function ajax()
     {
       //postされたデータを取得
-      $data = $this->class->getClassInStore(1);
-      return $data;
+      $st_cd = Input::get('store');
+      $data = $this->class->getClassInStore($st_cd);
+      return Response::make($data);
     }
 }
