@@ -28,6 +28,14 @@
     </form>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/ajax.js') }}"></script>
+
+
+    <select id="ajaxClass">
+      <option value=""></option>
+      @foreach( $data as $class )
+        <option value="{{ $class['cls_cd'] }}">{{ $class['cls_name'] }}</option>
+      @endforeach
+    </select>
   </body>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>

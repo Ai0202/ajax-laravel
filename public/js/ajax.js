@@ -20,10 +20,13 @@
       .done(function(data) {
         //成功時の処理
         $('#ajaxClass option').remove();
-        $.each(data, function(cls_cd, cls_name) {
-          $('#ajaxClass').append($('<option>').text(cls_name).attr('value', cls_cd));
-        });
+        // $.each(data, function(cls_cd, cls_name) {
+        //   $('#ajaxClass').append($('<option>').text(cls_name).attr('value', cls_cd));
+        // });
         console.log(data);
+        data.forEach(function(item) {
+            $('#ajaxClass').append($('<option>').text(item.cls_name).attr('value', item.cls_cd));
+        })
       })
       .fail(function(err) {
         //失敗時の処理

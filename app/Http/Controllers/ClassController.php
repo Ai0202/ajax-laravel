@@ -22,8 +22,10 @@ class ClassController extends Controller
     {
       $allClass = Clas::all();
       $stores = Store::all();
+      $st_cd = Input::get('store');
+      $data = $this->class->getClassInStore(1);
 
-      return view('class.index', compact('allClass','stores'));
+      return view('class.index', compact('allClass','stores','data'));
     }
 
     public function ajax()
