@@ -57,9 +57,9 @@
           //成功時の処理
           $('#ajaxClass option').remove();
           console.log(data);
-        //   data.forEach(function(item) {
-        //       $('#ajaxClass').append($('<option>').text(item.cls_name).attr('value', item.cls_cd));
-        //   })
+          data.forEach(function(item) {
+              $('#ajaxClass').append($('<option>').text(item.cls_name).attr('value', item.cls_cd));
+          });
         })
         .fail(function(err) {
           //失敗時の処理
