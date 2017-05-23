@@ -13,4 +13,10 @@ class Clas extends Model
     $class = $this->where('st_cd', $st_cd)->get();
     return $class;
   }
+
+  public function getClassByCd($cls_cd)
+  {
+    $class = $this->where('cls_cd', $cls_cd)->get();
+    return $class;
+  }
 }

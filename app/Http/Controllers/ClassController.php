@@ -30,9 +30,15 @@ class ClassController extends Controller
 
     public function ajax()
     {
+      $cls_cd = Input::get('cls_cd');
+      $data = $this->class->getClassByCd($cls_cd);
+      return Response::make($data);
+
       //postされたデータを取得
       $st_cd = Input::get('store');
-      $data = $this->class->getClassInStore($st_cd);
-      return Response::make($data);
+      if($st_cd) {
+        $data = $this->class->getClassInStore($st_cd);
+        return Response::make($data);
+      }
     }
 }

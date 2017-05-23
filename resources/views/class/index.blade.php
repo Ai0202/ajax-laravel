@@ -16,7 +16,7 @@
         @endforeach
       </select>
       <label>分類コード</label>
-      <input type="text" name="cls_txt">
+      <input type="text" name="cls_txt" id="ajaxtxt">
       <label>分類</label>
       <select id="ajaxClass">
         <option value=""></option>
