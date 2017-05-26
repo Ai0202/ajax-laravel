@@ -29,7 +29,6 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/ajax.js') }}"></script>
 
-
     <select id="ajaxClass">
       <option value=""></option>
       @foreach( $data as $class )
@@ -37,43 +36,6 @@
       @endforeach
     </select>
   </body>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-    $(function() {
-      $('#ajaxId').on('change', function() {
-        var val = $(this).val();
-        ajaxRequest(val);
-      });
 
-      function ajaxRequest(val) {
-        $.ajax({
-          url:'class/ajax',
-          type: 'POST',
-          datatype: 'json',
-          data: {
-            'store': val
-          }
-        })
-        .done(function(data) {
-          //成功時の処理
-          $('#ajaxClass option').remove();
-          $.each(data, function(cls_cd, cls_name) {
-            $('#ajaxClass').append($('<option>').text(Object.cls_name).attr('value', Object.cls_cd));
-          });
-          console.log(data);
-        })
-        .fail(function(err) {
-          //失敗時の処理
-          console.log('error');
-        });
-      }
 
-      $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-      });
-
-    });
-  </script> -->
 </html>

@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::get('class', 'ClassController@index');
 Route::post('class/ajax', 'ClassController@ajax');
+Route::post('class/store','ClassController@store')->name('store');
+Route::get('class/create', 'ClassController@create');
